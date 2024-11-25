@@ -14,9 +14,9 @@ class RegisterUserAction
         $data = $request->validated();
 
         $user = User::create([
-            'name' => $data->name,
-            'email' => $data->email,
-            'password' => bcrypt($data->password),
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' => bcrypt($data['password']),
         ]);
 
         Auth::login($user);

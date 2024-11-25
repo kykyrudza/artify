@@ -14,6 +14,10 @@ class HomeController extends Controller
 
     public function dashboard()
     {
-        return Inertia::render('Home/Dashboard');
+        $user = auth()->user();
+
+        return Inertia::render('Home/Dashboard', [
+            'user' => $user
+        ]);
     }
 }
