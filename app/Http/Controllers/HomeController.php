@@ -12,13 +12,15 @@ class HomeController extends Controller
         return Inertia::render('Home/Home');
     }
 
-    public function login()
+    public function dashboard()
     {
-        return Inertia::render('Auth/Login');
-    }
+        $user = auth()->user();
 
-    public function register()
-    {
-        return Inertia::render('Auth/Register');
+        $tasks = $user->tasks()->get();
+
+        return Inertia::render('Home/Dashboard', [
+            'user' => $user,
+            'tasks' => $tasks
+        ]);
     }
 }

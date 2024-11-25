@@ -6,12 +6,11 @@
                 <div class="flex items-center justify-between mb-4">
                     <h2 class="text-2xl font-bold  dark:text-gray-200 ">Sign Up</h2>
                 </div>
-                <!--            @submit.prevent="submitForm"-->
-                <form class="flex flex-col" >
+                <form class="flex flex-col" @submit.prevent="submitForm">
 
                         <input
-                            placeholder="First Name"
-                            v-model="form.firstName"
+                            placeholder="Name"
+                            v-model="form.name"
                             id="firstName"
                             name="firstName"
                             class="w-full dark:bg-zinc-700 dark:text-gray-200 border-0 rounded-md p-2 mb-4 dark:focus:bg-zinc-600 ring-zinc-200 ring-1 dark:ring-zinc-600 focus:outline-none focus:ring-1 focus:ring-yellow-500 transition ease-in-out duration-150"
@@ -128,13 +127,13 @@ export default {
         },
         form: {
             type: Object,
-            default: () => ({firstName: '', lastName: '', email: '', password: '', password_confirmation: ''})
+            default: () => ({name: '', email: '', password: '', password_confirmation: ''})
         },
     },
-    // methods: {
-    //     submitForm() {
-    //         Inertia.post(route('register.post'), this.form);
-    //     }
-    // }
+    methods: {
+        submitForm() {
+            Inertia.post(route('register.post'), this.form);
+        }
+    }
 }
 </script>
