@@ -16,8 +16,11 @@ class HomeController extends Controller
     {
         $user = auth()->user();
 
+        $tasks = $user->tasks()->get();
+
         return Inertia::render('Home/Dashboard', [
-            'user' => $user
+            'user' => $user,
+            'tasks' => $tasks
         ]);
     }
 }
