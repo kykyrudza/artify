@@ -1,10 +1,13 @@
 
 <template>
-123
+{{  user.name  }}
 </template>
 
 <script>
 export default {
-    name: "Dashboard"
+    name: "Dashboard",
+    props:{
+        user: Object
+    }
 }
 </script>
