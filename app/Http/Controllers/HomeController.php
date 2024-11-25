@@ -12,13 +12,8 @@ class HomeController extends Controller
         return Inertia::render('Home/Home');
     }
 
-    public function login()
+    public function dashboard()
     {
-        return Inertia::render('Auth/Login');
-    }
-
-    public function register()
-    {
-        return Inertia::render('Auth/Register');
+        return Inertia::render('Home/Dashboard');
     }
 }
