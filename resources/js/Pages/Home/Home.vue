@@ -30,6 +30,12 @@ export default {
     name: 'Home',
     components: {
         Link,
+    },
+    props: {
+        auth:{
+            user: Object,
+            default: null
+        }
     }
 };
 </script>
