@@ -12,9 +12,8 @@ class Task extends Model
     protected $fillable = [
         'nameTask',
         'descriptionTask',
-        'dueDateTask'
-    ];
-    protected $hidden = [
-        'user_id'
+        'dueDateTask',
+        'user_id',
+        'completedTask'
     ];
 }

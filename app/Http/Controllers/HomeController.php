@@ -16,7 +16,7 @@ class HomeController extends Controller
     {
         $user = auth()->user();
 
-        $tasks = $user->tasks()->get();
+        $tasks = $user->tasks()->where(['completedTask' => false])->get();
 
         return Inertia::render('Home/Dashboard', [
             'user' => $user,
