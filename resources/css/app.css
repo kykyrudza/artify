@@ -6,5 +6,5 @@
 
 body{
     font-family: 'Poppins', sans-serif;
-    @apply bg-[#dce0e8] text-[#181926]  dark:bg-[#292c3c]  dark:text-white duration-500   overflow-x-hidden;
+    @apply bg-white text-[#181926]  dark:bg-zinc-900  dark:text-white duration-500   overflow-x-hidden;
 }

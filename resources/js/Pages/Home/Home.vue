@@ -1,43 +1,57 @@
 <template>
-    <section class="">
-        <div class="mt-72 flex flex-col text-center space-y-7 items-center">
+
+    <div class="h-screen w-full flex items-center justify-center">
+        <div class="flex flex-col text-center space-y-7 items-center">
             <div>
-                <h1 class="text-5xl font-bold">Artify</h1>
+                <h1 class="text-5xl font-bold">
+                    Velora
+                </h1>
             </div>
 
             <div>
-                <h3>Lorem ipsum dolor sit amet, consectetur.</h3>
+                <h3>
+                    Simple app for you tasks!
+                </h3>
             </div>
 
             <div class="flex flex-col items-center gap-5 lg:flex-row">
-                <div>
-                    <Link :href="route('register')" class="button">Register</Link>
-                </div>
-                <div>
-                    <p>or</p>
-                </div>
-                <div>
-                    <Link href="/login" class="button">Login</Link>
-                </div>
+
+                <Link :href="route('register')" class="button">
+                    Register
+                </Link>
+
+                <p>
+                    or
+                </p>
+
+                <Link :href="route('login')" class="button">
+                    Login
+                </Link>
+
             </div>
         </div>
-    </section>
+    </div>
+
 </template>
 
 <script>
-import {Link} from "@inertiajs/inertia-vue3";
+
+import { Link } from "@inertiajs/inertia-vue3";
+import HomeLayout from "../../Layouts/HomeLayout.vue";
 export default {
     name: 'Home',
     components: {
         Link,
     },
+    layout: HomeLayout,
     props: {
         auth:{
             user: Object,
             default: null
         }
     }
-};
+}
+
 </script>
 
 <style>

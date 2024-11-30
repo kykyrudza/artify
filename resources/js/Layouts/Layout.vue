@@ -1,7 +1,10 @@
 <template>
-    <div>
+
+    <div class="h-full">
         <Header :auth="auth"/>
-        <slot />
+    </div>
+    <div class="h-full px-10">
+        <slot/>
     </div>
 </template>
 

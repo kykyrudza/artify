@@ -15,6 +15,7 @@ class CreateTaskAction
             'nameTask' => $task['nameTask'],
             'descriptionTask' => $task['descriptionTask'],
             'dueDateTask' => $task['dueDateTask'],
+            'user_id' => auth()->id(),
         ]);
 
     }

@@ -22,12 +22,12 @@ class HandleInertiaRequests extends Middleware
             'login',
             'register',
         ];
-
         return array_merge(parent::share($request), [
             'auth' => [
                 'user' => Auth::check() ? Auth::user()->only('id', 'name', 'email') : null,
             ],
             'showHeader' => !in_array(Route::currentRouteName(), $routsWithoutHeader),
+
         ]);
     }
 }
