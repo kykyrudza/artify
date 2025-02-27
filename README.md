@@ -1,3 +1,5 @@
+## Artify - task app (Laravel + Vue)
+
 download composer dependencies
 ```sh
 composer install
